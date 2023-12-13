@@ -12,6 +12,11 @@ type Cond struct {
 	Args *Args
 }
 
+// NewCond creates a new Cond.
+func NewCond() *Cond {
+	return &Cond{}
+}
+
 // Equal represents "field = value".
 func (c *Cond) Equal(field string, value interface{}) string {
 	buf := newStringBuilder()
